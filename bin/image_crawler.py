@@ -30,7 +30,7 @@ bucket_name = 'looken-stars'
 base_url = 'https://fabiaoqing.com/biaoqing/lists/page/{id}.html'
 
 sum = 0
-for i in xrange(101, 200):
+for i in xrange(1, 100):
     url = base_url.format(id = i)
     ret = requests.get(url)
     if ret.status_code != 200:
@@ -61,6 +61,6 @@ for i in xrange(101, 200):
 
             #从文件中上传冷存储类型的Object
             bos_client.put_object_from_file(bucket=bucket_name,
-                    key = file_name.replace('../data/', ''), file_name = file_name, storage_class=storage_class.STANDARD)
+                    key = 'emoji/' + file_name.replace('../data/', ''), file_name = file_name, storage_class=storage_class.STANDARD)
         except Exception as e:
             print(e)

@@ -28,5 +28,5 @@ from baidubce.services.bos import storage_class
 
 #从文件中上传冷存储类型的Object
 bos_client.put_object_from_file(bucket=bucket_name,
-        key = file_name.replace('../data/', ''), file_name = file_name, storage_class=storage_class.STANDARD)
+        key = 'emoji/' + file_name.replace('../data/', ''), file_name = file_name, storage_class=storage_class.STANDARD)
 
