@@ -63,7 +63,7 @@ for item in content:
     res['top'] = top
     res['mid'] = mid
     res['bottom'] = bottom
-    res['desc'] = txt
+    res['desc'] = txt.replace('<br/>', '')
 
     print(res)
     ret.append(res)
